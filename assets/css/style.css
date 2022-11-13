@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Big+Shoulders+Display&family=Bungee+Spice&family=Lexend+Deca:wght@300&display=swap');
+
+* {
+    background-color: #0E141B;
+    padding: 0;
+    margin: 0;
+}
+header {
+    margin-top: 1vh;
+    display: flex;
+    justify-content: center;
+}
+h1 {
+    font-weight: lighter;
+    font-family: 'Alfa Slab One';
+    color: yellow;
+}
+.upper {
+    text-transform: uppercase;
+    
+}
+main {
+    height: 91.9vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#startBtn {
+    cursor: pointer;
+    color: yellow;
+    height: 10vh;
+    width: 20vw;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    background-color: #1a2129;
+    transition: 0.5s;
+}
+#startBtn:hover {
+    transform: scale(1.2);
+}
