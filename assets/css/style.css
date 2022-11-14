@@ -1,9 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Big+Shoulders+Display&family=Bungee+Spice&family=Lexend+Deca:wght@300&display=swap');
 
+.vanish {
+    display: none;
+}
+.block {
+    display: block;
+}
 * {
     background-color: #0E141B;
     padding: 0;
     margin: 0;
+    max-height: auto;
 }
 header {
     margin-top: 1vh;
@@ -25,7 +32,7 @@ main {
     align-items: center;
     justify-content: center;
 }
-#startBtn {
+.startBtn {
     cursor: pointer;
     color: yellow;
     height: 10vh;
@@ -37,4 +44,14 @@ main {
 }
 #startBtn:hover {
     transform: scale(1.2);
+}
+.napsImg {
+    display: none;
+}
+.napsImgBlock {
+    display: grid;
+    transition: 5s;
+}
+.zoom {
+    transform: scale(3) rotate(6turn);
 }

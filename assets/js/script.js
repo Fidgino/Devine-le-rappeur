@@ -15,6 +15,20 @@ let listPunchline = [
 
 /* DOM ELEMENTS */
 
-let startButton = document.querySelector('#startBtn');
+let startButton = document.querySelector('.startBtn');
+let napsImg = document.querySelector('.napsImg');
+let okaySong = document.querySelector('.Okay')
 
 /* Button start game */
+
+startButton.addEventListener('click', function() {
+    startButton.classList.add('vanish');
+    napsImg.classList.add('napsImgBlock');
+    setTimeout(() => {
+        napsImg.classList.add('zoom')
+        okaySong.play();
+        setTimeout(() => {
+            napsImg.remove()
+          }, 5700)
+      }, 1500)
+})
