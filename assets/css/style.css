@@ -4,7 +4,7 @@
     display: none;
 }
 .block {
-    display: block;
+    display: flex !important;
 }
 * {
     background-color: #0E141B;
@@ -13,14 +13,14 @@
     max-height: auto;
 }
 header {
-    margin-top: 1vh;
+    margin-top: 2vh;
     display: flex;
     justify-content: center;
 }
 h1 {
     font-weight: lighter;
     font-family: 'Alfa Slab One';
-    color: yellow;
+    color: #ffff63;
 }
 .upper {
     text-transform: uppercase;
@@ -34,7 +34,7 @@ main {
 }
 .startBtn {
     cursor: pointer;
-    color: yellow;
+    color: #ffff63;
     height: 10vh;
     width: 20vw;
     font-family: Arial, Helvetica, sans-serif;
@@ -54,4 +54,48 @@ main {
 }
 .zoom {
     transform: scale(3) rotate(6turn);
+}
+.btn {
+    cursor: pointer;
+    color: #ffff63;
+    height: 7vh;
+    width: 15vw;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    background-color: #1a2129;
+    transition: 0.4s;
+}
+.btn:hover {
+    background-color: #2a3240;
+    color: yellow;
+}
+.containerGame {
+    height: 90vh;
+    width: 85vw;
+    display: none;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+}
+.containerButton {
+    text-align: center;
+    height: 15vh;
+}
+.bar {
+    position: absolute;
+}
+.containerPunchline {
+    border: #2a3240 solid 3px;
+    height: 30vh;
+    width: 50vw;
+    text-align: center;
+    margin-bottom: 23vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.punchline {
+    color: #ffff63;
+    font-size: 32px;
+    font-family: Arial, Helvetica, sans-serif;
 }
