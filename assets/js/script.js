@@ -20,6 +20,7 @@ let listPunchline = [
 
 const random = Math.floor(Math.random() * listPunchline.length);
 const random2 = Math.floor(Math.random() * listPunchline[random].length);
+let randomArray = 
 console.log(random, listPunchline[random][random2]);
 
 /* DOM ELEMENTS */
@@ -43,3 +44,9 @@ startButton.addEventListener('click', function() {
           }, 5700)
       }, 1500)
 })
+
+/* Game */
+
+for(let i = 0; i < 10; i++){
+    
+}
