@@ -40,8 +40,11 @@ let napsImg = document.querySelector('.napsImg');
 let okaySong = document.querySelector('.Okay');
 let pGame = document.querySelector('.containerGame');
 let buttonsRappeur = document.querySelectorAll('.btn');
-let punchlineText = document.querySelector('.punchlineDiv')
-let scoreText = document.querySelector('.score')
+let punchlineText = document.querySelector('.punchlineDiv');
+let round = document.querySelector('.round');
+let scoreText = document.querySelector('.score');
+let endGame = document.querySelector('.containerEnd');
+let scoreTextEnd = document.querySelector('.scoreEnd');
 
 /* Button start game */
 
@@ -53,35 +56,42 @@ startButton.addEventListener('click', function() {
         okaySong.play();
         setTimeout(() => {
             napsImg.remove()
-            pGame.classList.add('block')
-            actualPunchline = randomPunchline()
+            pGame.classList.add('flex');
+            actualPunchline = randomPunchline();
             punchlineText.querySelector('p').textContent = actualPunchline.punchline;
-          }, 5700);
-      }, 1500);
+          }, 5700); //5700
+      }, 1500);     //1500
 })
 
 /* Game */
 
 let p = 0
+let tourRestant = 10
 let invisibleCount = 0
 for(let i = 0; i < buttonsRappeur.length; i++){
     let button = buttonsRappeur[i];
     button.addEventListener('click', function() {
         console.log(actualPunchline);
         if(actualPunchline.rappeur === button.textContent){
+            tourRestant--;
             p++
             invisibleCount++
-            scoreText.textContent = p + "/10"
+            scoreText.textContent = p + "/10";
             actualPunchline = randomPunchline()
             punchlineText.querySelector('p').textContent = actualPunchline.punchline;
+            round.textContent = "Tour restant : " + tourRestant;
         }
         else {
-            actualPunchline = randomPunchline()
+            tourRestant--;
+            actualPunchline = randomPunchline();
+            round.textContent = "Tour restant : " + tourRestant;
             punchlineText.querySelector('p').textContent = actualPunchline.punchline;
-            invisibleCount++
+            invisibleCount++;
         }
         if(invisibleCount === 10){
             pGame.remove();
+            endGame.classList.add('block');
+            scoreTextEnd.textContent = p + "/10";
         }
 })
-}
+};

@@ -3,8 +3,11 @@
 .vanish {
     display: none;
 }
-.block {
+.flex {
     display: flex !important;
+}
+.block {
+    display: block !important;
 }
 * {
     background-color: #0E141B;
@@ -16,6 +19,8 @@ header {
     margin-top: 2vh;
     display: flex;
     justify-content: center;
+    border-bottom: #ffff63 solid 1px;
+    height: 7vh;
 }
 h1 {
     font-weight: lighter;
@@ -27,7 +32,7 @@ h1 {
     
 }
 main {
-    height: 91.9vh;
+    height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -85,10 +90,16 @@ main {
 }
 .containerButton {
     text-align: center;
-    height: 15vh;
+    height: 25vh;
 }
 .bar {
     position: absolute;
+}
+.round {
+    margin-bottom: 4vh;
+    color: #ffff63;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .containerPunchline {
     border: #2a3240 solid 3px;
@@ -106,49 +117,43 @@ main {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-@keyframes multiColor {
-    from, to { 
-        color: hsl(324, 70%, 45%);
-        right: 48%;
+@keyframes rainbow{
+    100%,0%{
+        color: #EDED6D;
     }
-    10%      { 
-        color: hsl(360, 65%, 45%);
-        right: 20%;
+    25%{
+        color: #DACC3E; 
     }
-    20%      { 
-        color: hsl( 36, 80%, 45%);
-        right: 1%;
-    
+    41%{
+        color: #C8D96F
     }
-    30%      {
-        color: hsl( 72, 75%, 35%);
-        right: 1%;
-        top: 40%; 
+    50%{
+        color: #E0FF4F;
     }
-    40%      { color: hsl(108, 65%, 35%); }
-    50%      { color: hsl(144, 75%, 35%); }
-    60%      { color: hsl(180, 75%, 35%); }
-    70%      { color: hsl(216, 60%, 45%); }
-    80%      { 
-        color: hsl(252, 65%, 50%); 
-
-        
+    75%{
+        color: #FAC60C;
     }
-    90%      { color: hsl(288, 60%, 40%); }
+    91%{
+        color: #FFB81F;
+    }
 }
 .containerEnd {
-    margin-bottom: 5vh;
-}
-.containerScore {
-    text-align: center;
-}
-.scoreEnd {
-    color: hsl(324, 70%, 45%);
-    animation: multiColor 3s infinite;
-    margin-top: 3vh;
-    position: absolute;
+    display: none;
 }
 .endGame {
-    margin-bottom: 20vh;
-    font-size: 15px;
+    margin-bottom: 15vh;
+}
+.containerScoreEnd {
+    text-align: center;
+    margin-bottom: 15vh;
+}
+.containerScoreEnd h1 {
+    font-size: 30px;
+}
+.containerScoreEnd p {
+    animation: infinite rainbow 1s;
+    border: #ffff63 solid 1px;
+    margin-top: 10vh;
+    font-size: 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
 }
