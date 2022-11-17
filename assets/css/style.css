@@ -42,8 +42,8 @@ main {
     background-color: #1a2129;
     transition: 0.5s;
 }
-#startBtn:hover {
-    transform: scale(1.2);
+.startBtn:hover {
+    transform: scale(1.1);
 }
 .napsImg {
     display: none;
@@ -78,7 +78,7 @@ main {
 .containerGame {
     height: 90vh;
     width: 85vw;
-    display: flex;
+    display: none;
     justify-content: flex-end;
     flex-direction: column;
     align-items: center;
@@ -104,4 +104,51 @@ main {
     color: #ffff63;
     font-size: 32px;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes multiColor {
+    from, to { 
+        color: hsl(324, 70%, 45%);
+        right: 48%;
+    }
+    10%      { 
+        color: hsl(360, 65%, 45%);
+        right: 20%;
+    }
+    20%      { 
+        color: hsl( 36, 80%, 45%);
+        right: 1%;
+    
+    }
+    30%      {
+        color: hsl( 72, 75%, 35%);
+        right: 1%;
+        top: 40%; 
+    }
+    40%      { color: hsl(108, 65%, 35%); }
+    50%      { color: hsl(144, 75%, 35%); }
+    60%      { color: hsl(180, 75%, 35%); }
+    70%      { color: hsl(216, 60%, 45%); }
+    80%      { 
+        color: hsl(252, 65%, 50%); 
+
+        
+    }
+    90%      { color: hsl(288, 60%, 40%); }
+}
+.containerEnd {
+    margin-bottom: 5vh;
+}
+.containerScore {
+    text-align: center;
+}
+.scoreEnd {
+    color: hsl(324, 70%, 45%);
+    animation: multiColor 3s infinite;
+    margin-top: 3vh;
+    position: absolute;
+}
+.endGame {
+    margin-bottom: 20vh;
+    font-size: 15px;
 }
