@@ -62,8 +62,8 @@ startButton.addEventListener('click', function() {
             pGame.classList.add('flex');
             actualPunchline = randomPunchline();
             punchlineText.querySelector('p').textContent = actualPunchline.punchline;
-          }, 0); //5700
-      }, 0);     //1500
+          }, 5700); //5700
+      }, 1500);     //1500
 })
 
 /* Game */
