@@ -1,3 +1,3 @@
 # Devine-le-rappeur
 
-https://fidgino.github.io/Devine-le-rappeur/
+## [Play](https://fidgino.github.io/Devine-le-rappeur/)
